@@ -31,4 +31,8 @@ Route::get('/name/{id?}', function ($id=null) {
     return $id;
 });
 
+Route::match(['get', 'post'], '/user1', function (Request $request) {
+    return 'Request method is :'.$request->method();
+});
+
 
