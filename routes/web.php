@@ -23,3 +23,6 @@ Route::get('/product/{var?}', [ProductController::class, 'index']); //  )->name(
 Route::get('/user', function () {
     return view('user');
 });
+// Route::view('URI', 'viewName');
+
+Route::get('/user', [ProductController::class, 'userfunc']);
