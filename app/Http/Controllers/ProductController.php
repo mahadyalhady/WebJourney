@@ -13,6 +13,12 @@ class ProductController extends Controller
 
     function userfunc()
     {
-        return view('user');
+        // $var = 'Choose your development stack wisely';
+        $var = array(
+            'name' => 'Rafi',
+            'age' => '18',
+            'hobby' => 'Games'
+        );
+        return view('user', compact('var'));
     }
 }
