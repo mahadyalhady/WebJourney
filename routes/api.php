@@ -35,4 +35,6 @@ Route::match(['get', 'post'], '/user1', function (Request $request) {
     return 'Request method is :'.$request->method();
 });
 
-
+Route::any('user2', function (Request $request) {
+    return 'Request method is :'.$request->method();
+});
