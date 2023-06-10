@@ -26,3 +26,9 @@ Route::get('/category/{id?}', function ($id=null) {
 Route::get('/numbers/{id?}', function ($id1=null) {
     return $id1;
 })->where('id1','[0-9]');
+
+Route::get('/name/{id?}', function ($id=null) {
+    return $id;
+});
+
+
