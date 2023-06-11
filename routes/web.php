@@ -21,7 +21,7 @@ Route::get('/', function () {
 Route::get('/product/{var?}', [ProductController::class, 'index']); //  )->name('product.index')
 
 Route::get('/user', function () {
-    return view('user');.
+    return view('user');
 });
 // Route::view('URI', 'viewName');
 
