@@ -26,3 +26,7 @@ Route::get('/user', function () {
 // Route::view('URI', 'viewName');
 
 Route::get('/user', [ProductController::class, 'userfunc']);
+
+Route::view('about', 'about');
+Route::view('contact', 'contact');
+Route::view('service', 'service');
