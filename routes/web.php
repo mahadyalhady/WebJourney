@@ -38,3 +38,5 @@ Route::view('/service', 'service');
 Route::get('/posts', [PostController::class, 'apipost']);
 Route::get('/posts/{id}', [PostController::class, 'apipostsingle']); //not Working
 Route::get('/addpost', [PostController::class, 'addpost']);
+Route::get('/editpost/{id}', [PostController::class, 'editpost']);
+Route::get('/deletepost/{id}', [PostController::class, 'deletepost']);
