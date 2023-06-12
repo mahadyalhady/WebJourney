@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\PostController;
+use Illuminate\Queue\Events\WorkerStopping;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProductController;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +33,8 @@ Route::get('/user', [ProductController::class, 'userfunc']);
 Route::view('/about', 'about');
 Route::view('/contact', 'contact');
 Route::view('/service', 'service');
+
+//http client
+Route::get('/posts', [PostController::class, 'apipost']);
+Route::get('/posts/{id}', [PostController::class, 'apipostsingle']); //not Working
+Route::get('/addpost', [PostController::class, 'addpost']);
