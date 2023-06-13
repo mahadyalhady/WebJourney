@@ -54,4 +54,4 @@ Route::any('/fs', function () {
 
 //form create
 Route::get('/form', [FormController::class, 'formcreate']);
-Route::post('/form-submit', [FormController::class, 'formsubmit'])->name('formsubmit');
+Route::post('/form-submit', [FormController::class, 'formsubmit'])->name('formvalidation');
