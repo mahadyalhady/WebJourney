@@ -42,12 +42,12 @@ Route::get('/editpost/{id}', [PostController::class, 'editpost']);
 Route::get('/deletepost/{id}', [PostController::class, 'deletepost']);
 
 //fluent string
-// Route::any('/fs', function () {
-$s = 'I am a web developer';
-$fluentstring = Str::of($s)
-    ->ucfirst($s)
-    ->replaceFirst('I', 'we', $s)
-    ->replaceFirst('am', 'are', $s)
-    ->camel($s);
-echo $fluentstring;
-// });
+Route::any('/fs', function () {
+    $s = 'I am a web developer';
+    $fluentstring = Str::of($s)
+        ->ucfirst($s)
+        ->replaceFirst('I', 'we', $s)
+        ->replaceFirst('am', 'are', $s)
+        ->camel($s);
+    echo $fluentstring;
+});
