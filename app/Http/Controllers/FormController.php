@@ -10,4 +10,11 @@ class FormController extends Controller
     {
         return view('form');
     }
+
+    public function formsubmit(Request $request)
+    {
+        // return 'Form Submit Successful';
+        return $request->all();
+    }
+
 }
