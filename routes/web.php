@@ -1,10 +1,10 @@
 <?php
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\FormController;
 use Illuminate\Queue\Events\WorkerStopping;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ProductController;
-use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -51,3 +51,6 @@ Route::any('/fs', function () {
         ->camel($s);
     echo $fluentstring;
 });
+
+//form create
+Route::get('/form', [FormController::class, 'formcreate']);
