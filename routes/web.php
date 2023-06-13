@@ -3,6 +3,7 @@
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\SessionController;
 use Illuminate\Queue\Events\WorkerStopping;
 use Illuminate\Support\Facades\Route;
 
@@ -55,3 +56,8 @@ Route::any('/fs', function () {
 //form create
 Route::get('/form', [FormController::class, 'formcreate']);
 Route::post('/form-submit', [FormController::class, 'formsubmit'])->name('formvalidation');
+
+//http session
+Route::get('/session/get', [SessionController::class, 'getsession']);
+Route::get('/session/store', [SessionController::class, 'storesession']);
+Route::get('/session/delete', [SessionController::class, 'deletesession']);
